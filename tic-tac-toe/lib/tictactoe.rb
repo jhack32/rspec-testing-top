@@ -8,7 +8,7 @@ class TicTacToeGame
 
   def play?
     puts "Would you like to play? (Yes/No)"
-    option_to_play = $stdin.gets.chomp.downcase
+    option_to_play = STDIN.gets.chomp.downcase
     if option_to_play == "yes"
       start_game
     elsif option_to_play == "no"
@@ -69,7 +69,7 @@ class TicTacToeGame
   def player_option
     if @moves < 10
       puts "Enter a number from 1 through 9."
-      option = gets.chomp.to_s
+      option = STDIN.gets.chomp.to_s
     else
       puts "The board is full! Tie!"
       play?
